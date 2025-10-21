@@ -1,0 +1,2180 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Альфа-Бизнес | Для предпринимателей</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    
+    <!-- Ваши стили здесь -->
+</head>
+<body>
+    <!-- Декоративные элементы -->
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    
+    <!-- Контейнер контента -->
+    <div class="content-container">
+        <!-- Вкладка Курсы -->
+        <div id="courses-page" class="page">
+            <h1 class="page-title">Курсы для предпринимателей</h1>
+            <p class="page-subtitle">Повышайте квалификацию с нашими экспертными курсами</p>
+            
+            <div class="course-categories">
+                <!-- Основы предпринимательства -->
+                <div class="course-category" data-course="basics">
+                    <div class="course-header">
+                        <h3>Основы предпринимательства</h3>
+                        <div class="course-progress">67% завершено</div>
+                    </div>
+                    <p>Фундаментальные знания для начала и развития бизнеса</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 67%"></div>
+                    </div>
+                    
+                    <ul class="subtopics-list">
+                        <li class="subtopic-item" data-subtopic="idea">
+                            <span class="subtopic-name">Генерация бизнес-идеи</span>
+                            <span class="subtopic-status completed">Пройдено</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="plan">
+                            <span class="subtopic-name">Разработка бизнес-плана</span>
+                            <span class="subtopic-status completed">Пройдено</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="legal">
+                            <span class="subtopic-name">Юридические аспекты</span>
+                            <span class="subtopic-status completed">Пройдено</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="finance">
+                            <span class="subtopic-name">Финансовое моделирование</span>
+                            <span class="subtopic-status">Не начато</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="team">
+                            <span class="subtopic-name">Создание команды</span>
+                            <span class="subtopic-status">Не начато</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="pitch">
+                            <span class="subtopic-name">Подготовка питча</span>
+                            <span class="subtopic-status">Не начато</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Финансы для бизнеса -->
+                <div class="course-category" data-course="finance">
+                    <div class="course-header">
+                        <h3>Финансы для бизнеса</h3>
+                        <div class="course-progress">17% завершено</div>
+                    </div>
+                    <p>Управление финансами, налоговая оптимизация, финансовое планирование</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 17%"></div>
+                    </div>
+                    
+                    <ul class="subtopics-list">
+                        <li class="subtopic-item" data-subtopic="accounting">
+                            <span class="subtopic-name">Основы финансового учета</span>
+                            <span class="subtopic-status completed">Пройдено</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="budgeting">
+                            <span class="subtopic-name">Бюджетирование и контроль</span>
+                            <span class="subtopic-status">Не начато</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="cashflow">
+                            <span class="subtopic-name">Управление денежными потоками</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="tax">
+                            <span class="subtopic-name">Налоговая оптимизация</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="reporting">
+                            <span class="subtopic-name">Финансовая отчетность</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="analysis">
+                            <span class="subtopic-name">Финансовый анализ</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Маркетинг и продажи -->
+                <div class="course-category" data-course="marketing">
+                    <div class="course-header">
+                        <h3>Маркетинг и продажи</h3>
+                        <div class="course-progress">17% завершено</div>
+                    </div>
+                    <p>Цифровой маркетинг, стратегии продаж, привлечение клиентов</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 17%"></div>
+                    </div>
+                    
+                    <ul class="subtopics-list">
+                        <li class="subtopic-item" data-subtopic="digital">
+                            <span class="subtopic-name">Основы цифрового маркетинга</span>
+                            <span class="subtopic-status completed">Пройдено</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="brand">
+                            <span class="subtopic-name">Создание бренда</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="content">
+                            <span class="subtopic-name">Контент-маркетинг</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="smm">
+                            <span class="subtopic-name">SMM и работа с соцсетями</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="sales">
+                            <span class="subtopic-name">Техники продаж</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="crm">
+                            <span class="subtopic-name">Внедрение CRM-системы</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Управление персоналом -->
+                <div class="course-category" data-course="hr">
+                    <div class="course-header">
+                        <h3>Управление персоналом</h3>
+                        <div class="course-progress">0% завершено</div>
+                    </div>
+                    <p>Подбор сотрудников, мотивация команды, развитие корпоративной культуры</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    
+                    <ul class="subtopics-list">
+                        <li class="subtopic-item" data-subtopic="hiring">
+                            <span class="subtopic-name">Эффективный подбор персонала</span>
+                            <span class="subtopic-status">Не начато</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="motivation">
+                            <span class="subtopic-name">Системы мотивации</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="development">
+                            <span class="subtopic-name">Развитие сотрудников</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="culture">
+                            <span class="subtopic-name">Корпоративная культура</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="leadership">
+                            <span class="subtopic-name">Лидерство и управление</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="conflicts">
+                            <span class="subtopic-name">Управление конфликтами</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Юридические аспекты -->
+                <div class="course-category" data-course="legal">
+                    <div class="course-header">
+                        <h3>Юридические аспекты бизнеса</h3>
+                        <div class="course-progress">17% завершено</div>
+                    </div>
+                    <p>Правовые основы предпринимательства, договорная работа, защита бизнеса</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 17%"></div>
+                    </div>
+                    
+                    <ul class="subtopics-list">
+                        <li class="subtopic-item" data-subtopic="contracts">
+                            <span class="subtopic-name">Договорная работа в бизнесе</span>
+                            <span class="subtopic-status completed">Пройдено</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="forms">
+                            <span class="subtopic-name">Выбор организационной формы</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="taxes">
+                            <span class="subtopic-name">Налоговое право</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="labor">
+                            <span class="subtopic-name">Трудовое законодательство</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="intellectual">
+                            <span class="subtopic-name">Интеллектуальная собственность</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="disputes">
+                            <span class="subtopic-name">Разрешение споров</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Цифровая трансформация -->
+                <div class="course-category" data-course="digital">
+                    <div class="course-header">
+                        <h3>Цифровая трансформация</h3>
+                        <div class="course-progress">0% завершено</div>
+                    </div>
+                    <p>Автоматизация процессов, цифровые инструменты, онлайн-присутствие</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    
+                    <ul class="subtopics-list">
+                        <li class="subtopic-item" data-subtopic="automation">
+                            <span class="subtopic-name">Автоматизация бизнес-процессов</span>
+                            <span class="subtopic-status">Не начато</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="tools">
+                            <span class="subtopic-name">Цифровые инструменты</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="ecommerce">
+                            <span class="subtopic-name">Электронная коммерция</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="analytics">
+                            <span class="subtopic-name">Аналитика данных</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="security">
+                            <span class="subtopic-name">Кибербезопасность</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                        <li class="subtopic-item" data-subtopic="strategy">
+                            <span class="subtopic-name">Стратегия цифровизации</span>
+                            <span class="subtopic-status">Заблокировано</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Детали курса -->
+            <div id="course-detail" class="course-detail">
+                <button class="back-button" id="back-to-courses">
+                    <i class="fas fa-arrow-left"></i> Назад к курсам
+                </button>
+                <h2 id="course-title">Основы предпринимательства</h2>
+                <p id="course-description">Фундаментальные знания для начала и развития бизнеса</p>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" id="course-progress-fill" style="width: 67%"></div>
+                </div>
+                <div class="course-progress" id="course-progress-text">67% завершено</div>
+                
+                <ul class="subtopics-list" id="course-subtopics">
+                    <!-- Подтемы будут добавляться динамически -->
+                </ul>
+            </div>
+            
+            <!-- Детали подтемы -->
+            <div id="subtopic-detail" class="subtopic-detail">
+                <button class="back-button" id="back-to-course">
+                    <i class="fas fa-arrow-left"></i> Назад к курсу
+                </button>
+                <h2 id="subtopic-title">Генерация бизнес-идеи</h2>
+                
+                <div class="subtopic-content">
+                    <div class="video-container">
+                        <div class="play-icon">▶</div>
+                        <div class="video-title">Видео: Методы генерации бизнес-идей</div>
+                    </div>
+                    
+                    <div class="summary-container">
+                        <div class="summary-content">
+                            <h4>Конспект урока:</h4>
+                            <p>Генерация бизнес-идеи - это первый и один из самых важных этапов создания собственного дела. Успешная идея должна решать конкретную проблему или удовлетворять потребность целевой аудитории.</p>
+                            <p>Ключевые аспекты: анализ рынка, выявление потребностей, методы креативного мышления, оценка потенциала идей.</p>
+                        </div>
+                    </div>
+
+                    <div class="learning-objectives">
+                        <h4><i class="fas fa-bullseye"></i> Цели обучения</h4>
+                        <ul class="task-list">
+                            <li class="task-item">Освоить 5 методов генерации бизнес-идей</li>
+                            <li class="task-item">Научиться оценивать потенциал идей по 4 критериям</li>
+                            <li class="task-item">Разработать собственную бизнес-идею с учетом рыночных потребностей</li>
+                            <li class="task-item">Понять разницу между хорошей и плохой бизнес-идеей</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subtopic-description">
+                        <p>Генерация бизнес-идеи - это первый и один из самых важных этапов создания собственного дела. Успешная идея должна решать конкретную проблему или удовлетворять потребность целевой аудитории.</p>
+                        
+                        <h3>Ключевые аспекты генерации бизнес-идей:</h3>
+                        <ul class="task-list">
+                            <li class="task-item">Анализ текущих трендов и потребностей рынка</li>
+                            <li class="task-item">Выявление неудовлетворенных потребностей потребителей</li>
+                            <li class="task-item">Использование методов креативного мышления (мозговой штурм, SCAMPER, mind mapping)</li>
+                            <li class="task-item">Оценка потенциала идей по критериям уникальности, масштабируемости и прибыльности</li>
+                            <li class="task-item">Проверка идей на соответствие вашим навыкам и ресурсам</li>
+                        </ul>
+
+                        <div class="case-study">
+                            <h4>Кейс: Успешная бизнес-идея "Кофе с собой"</h4>
+                            <p>Рассмотрим историю создания сети кофеен "Кофе с собой". Идея появилась в 2010 году, когда основатель заметил, что люди все чаще пьют кофе на ходу, но качественных предложений на рынке практически не было.</p>
+                            <p><strong>Ключевые факторы успеха:</strong></p>
+                            <ul class="task-list">
+                                <li class="task-item">Выявление неудовлетворенной потребности - качественный кофе навынос</li>
+                                <li class="task-item">Простота и масштабируемость бизнес-модели</li>
+                                <li class="task-item">Учет современных трендов - мобильность и скорость</li>
+                                <li class="task-item">Оптимальное ценовое предложение</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="quiz-container">
+                            <div class="quiz-question">Какой из перечисленных методов НЕ относится к техникам генерации идей?</div>
+                            <div class="quiz-options">
+                                <div class="quiz-option" data-correct="false">Мозговой штурм</div>
+                                <div class="quiz-option" data-correct="false">Метод SCAMPER</div>
+                                <div class="quiz-option" data-correct="true">SWOT-анализ</div>
+                                <div class="quiz-option" data-correct="false">Ментальные карты</div>
+                            </div>
+                            <button class="submit-quiz">Проверить ответ</button>
+                            <div class="quiz-result"></div>
+                        </div>
+
+                        <div class="complex-quiz">
+                            <h4>Практическое задание: Оценка бизнес-идеи</h4>
+                            <p>Представьте, что вы рассматриваете идею открытия сервиса по доставке здорового питания в офисы. Оцените ее по следующим критериям:</p>
+                            
+                            <div class="quiz-container">
+                                <div class="quiz-question">1. Насколько эта идея соответствует текущим трендам?</div>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="false">Не соответствует - люди предпочитают фастфуд</div>
+                                    <div class="quiz-option" data-correct="true">Полностью соответствует - растет спрос на здоровое питание</div>
+                                    <div class="quiz-option" data-correct="false">Частично соответствует - тренд есть, но слабый</div>
+                                </div>
+                            </div>
+
+                            <div class="quiz-container">
+                                <div class="quiz-question">2. Каков потенциал масштабирования этой идеи?</div>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="false">Ограниченный - только для крупных городов</div>
+                                    <div class="quiz-option" data-correct="false">Средний - можно развивать в региональных центрах</div>
+                                    <div class="quiz-option" data-correct="true">Высокий - возможность франшизы по всей стране</div>
+                                </div>
+                            </div>
+
+                            <div class="quiz-container">
+                                <div class="quiz-question">3. Какой основной риск у этой бизнес-идеи?</div>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="false">Технологический - сложная логистика</div>
+                                    <div class="quiz-option" data-correct="true">Рыночный - высокая конкуренция</div>
+                                    <div class="quiz-option" data-correct="false">Финансовый - большие первоначальные вложения</div>
+                                </div>
+                            </div>
+                            <button class="submit-quiz">Проверить все ответы</button>
+                            <div class="quiz-result"></div>
+                        </div>
+
+                        <div class="practical-task">
+                            <h4><i class="fas fa-tasks"></i> Практическое задание</h4>
+                            <p><strong>Разработайте собственную бизнес-идею:</strong></p>
+                            <ol class="task-list">
+                                <li class="task-item">Выберите сферу, которая вам интересна</li>
+                                <li class="task-item">Проведите анализ рынка и выявите неудовлетворенные потребности</li>
+                                <li class="task-item">Сгенерируйте 3 варианта бизнес-идей с использованием изученных методов</li>
+                                <li class="task-item">Оцените каждую идею по критериям уникальности, масштабируемости и прибыльности</li>
+                                <li class="task-item">Выберите лучшую идею и обоснуйте свой выбор</li>
+                            </ol>
+                        </div>
+
+                        <div class="additional-resources">
+                            <h4><i class="fas fa-book-open"></i> Дополнительные материалы</h4>
+                            <a href="#" class="resource-link" data-file="business-idea-checklist.pdf">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Чек-лист оценки бизнес-идеи (PDF)</span>
+                            </a>
+                            <a href="#" class="resource-link" data-file="entrepreneur-interviews.mp4">
+                                <i class="fas fa-video"></i>
+                                <span>Видео-интервью с успешными предпринимателями</span>
+                            </a>
+                            <a href="#" class="resource-link" data-file="market-analysis-template.xlsx">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Шаблон анализа рынка (Excel)</span>
+                            </a>
+                            <a href="#" class="resource-link" data-file="idea-generation-book.pdf">
+                                <i class="fas fa-book"></i>
+                                <span>Книга "Искусство генерации идей"</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <button class="mark-complete">
+                        <i class="fas fa-check"></i> Отметить как завершенное
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Вкладка Конструктор -->
+        <div id="constructor-page" class="page hidden">
+            <h1 class="page-title">Конструктор бизнес-решений</h1>
+            <p class="page-subtitle">Ответьте на вопросы, чтобы получить персонализированные рекомендации для вашего бизнеса</p>
+            
+            <div class="quiz-container-main" id="quiz-container-main">
+                <div class="quiz-header">
+                    <h3>Вопрос <span id="current-question">1</span> из <span id="total-questions">7</span></h3>
+                    <div class="quiz-progress">14% завершено</div>
+                </div>
+                
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress-fill" id="quiz-progress-fill" style="width: 14%"></div>
+                </div>
+                
+                <div class="quiz-question-main" id="quiz-question-1">
+                    <h3>Какой у вас текущий этап развития бизнеса?</h3>
+                    <div class="quiz-options-main">
+                        <div class="quiz-option-main" data-value="idea">Только идея, бизнес еще не запущен</div>
+                        <div class="quiz-option-main" data-value="startup">Запуск (до 1 года деятельности)</div>
+                        <div class="quiz-option-main" data-value="growth">Стадия роста (1-3 года)</div>
+                        <div class="quiz-option-main" data-value="stable">Стабильный бизнес (более 3 лет)</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question-main hidden" id="quiz-question-2">
+                    <h3>Какова ваша основная цель на ближайший год?</h3>
+                    <div class="quiz-options-main">
+                        <div class="quiz-option-main" data-value="launch">Запустить бизнес</div>
+                        <div class="quiz-option-main" data-value="clients">Увеличить клиентскую базу</div>
+                        <div class="quiz-option-main" data-value="profit">Повысить прибыльность</div>
+                        <div class="quiz-option-main" data-value="scale">Масштабировать бизнес</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question-main hidden" id="quiz-question-3">
+                    <h3>Сколько сотрудников работает в вашей компании?</h3>
+                    <div class="quiz-options-main">
+                        <div class="quiz-option-main" data-value="solo">Только я</div>
+                        <div class="quiz-option-main" data-value="small">2-5 сотрудников</div>
+                        <div class="quiz-option-main" data-value="medium">6-15 сотрудников</div>
+                        <div class="quiz-option-main" data-value="large">Более 15 сотрудников</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question-main hidden" id="quiz-question-4">
+                    <h3>Какой у вас ежемесячный оборот?</h3>
+                    <div class="quiz-options-main">
+                        <div class="quiz-option-main" data-value="low">До 300 тыс. рублей</div>
+                        <div class="quiz-option-main" data-value="medium">300 тыс. - 1 млн рублей</div>
+                        <div class="quiz-option-main" data-value="high">1-5 млн рублей</div>
+                        <div class="quiz-option-main" data-value="very-high">Более 5 млн рублей</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question-main hidden" id="quiz-question-5">
+                    <h3>В какой сфере работает ваш бизнес?</h3>
+                    <div class="quiz-options-main">
+                        <div class="quiz-option-main" data-value="services">Услуги</div>
+                        <div class="quiz-option-main" data-value="retail">Розничная торговля</div>
+                        <div class="quiz-option-main" data-value="production">Производство</div>
+                        <div class="quiz-option-main" data-value="online">Интернет-бизнес</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question-main hidden" id="quiz-question-6">
+                    <h3>Какой основной канал привлечения клиентов вы используете?</h3>
+                    <div class="quiz-options-main">
+                        <div class="quiz-option-main" data-value="word">Сарафанное радио</div>
+                        <div class="quiz-option-main" data-value="social">Социальные сети</div>
+                        <div class="quiz-option-main" data-value="ads">Контекстная реклама</div>
+                        <div class="quiz-option-main" data-value="partners">Партнерские программы</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question-main hidden" id="quiz-question-7">
+                    <h3>Какую основную проблему вы видите в своем бизнесе?</h3>
+                    <div class="quiz-options-main">
+                        <div class="quiz-option-main" data-value="clients">Нехватка клиентов</div>
+                        <div class="quiz-option-main" data-value="finance">Финансовые сложности</div>
+                        <div class="quiz-option-main" data-value="team">Проблемы с командой</div>
+                        <div class="quiz-option-main" data-value="process">Неэффективные процессы</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-navigation">
+                    <button class="quiz-button secondary" id="prev-btn" disabled>
+                        <i class="fas fa-arrow-left"></i> Назад
+                    </button>
+                    <button class="quiz-button" id="next-btn" disabled>
+                        Далее <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="results-container" id="results-container">
+                <div class="results-header">
+                    <h2>Персонализированные рекомендации для вашего бизнеса</h2>
+                    <p>На основе ваших ответов мы подготовили следующие решения</p>
+                </div>
+                
+                <div class="results-category">
+                    <h3>Финансовые решения <span class="match-percentage">92%</span></h3>
+                    
+                    <div class="product-recommendation">
+                        <h4>Кредитная линия "Бизнес-Старт"</h4>
+                        <p>Специально для бизнесов на стадии запуска и роста с оборотом до 1 млн рублей.</p>
+                        <ul class="product-features">
+                            <li>Льготная ставка от 9,5% годовых</li>
+                            <li>Отсрочка платежа на первые 3 месяца</li>
+                            <li>Бесплатное открытие счета</li>
+                            <li>Консультация финансового эксперта</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-recommendation">
+                        <h4>Инвестиционный продукт "Рост"</h4>
+                        <p>Для реинвестирования прибыли и ускорения развития бизнеса.</p>
+                        <ul class="product-features">
+                            <li>Доходность до 12% годовых</li>
+                            <li>Частичное снятие без потери процентов</li>
+                            <li>Автоматическая капитализация</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="results-category">
+                    <h3>Маркетинговые решения <span class="match-percentage">85%</span></h3>
+                    
+                    <div class="product-recommendation">
+                        <h4>Пакет "Цифровой маркетинг"</h4>
+                        <p>Комплексное продвижение вашего бизнеса в интернете.</p>
+                        <ul class="product-features">
+                            <li>Создание и ведение социальных сетей</li>
+                            <li>Настройка контекстной рекламы</li>
+                            <li>SEO-оптимизация сайта</li>
+                            <li>Ежемесячная аналитика эффективности</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="results-category">
+                    <h3>Операционные решения <span class="match-percentage">78%</span></h3>
+                    
+                    <div class="product-recommendation">
+                        <h4>Автоматизация бизнес-процессов</h4>
+                        <p>Оптимизация рутинных операций для повышения эффективности.</p>
+                        <ul class="product-features">
+                            <li>Внедрение CRM-системы</li>
+                            <li>Настройка электронного документооборота</li>
+                            <li>Автоматизация отчетности</li>
+                            <li>Обучение сотрудников</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-recommendation">
+                        <h4>Бухгалтерское сопровождение "Премиум"</h4>
+                        <p>Полное ведение учета и налоговое консультирование.</p>
+                        <ul class="product-features">
+                            <li>Подготовка и сдача всей отчетности</li>
+                            <li>Консультации по оптимизации налогов</li>
+                            <li>Работа с первичной документацией</li>
+                            <li>Персональный бухгалтер</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="restart-quiz">
+                    <button class="quiz-button" id="restart-quiz-btn">
+                        <i class="fas fa-redo"></i> Пройти тест заново
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Вкладка Чаты -->
+        <div id="chats-page" class="page hidden">
+            <h1 class="page-title">Чаты и консультации</h1>
+            <p class="page-subtitle">Получите помощь от наших экспертов в любое время</p>
+            
+            <div class="chat-list">
+                <div class="chat-item chat-pinned" data-chat="ai-analysis">
+                    <div class="chat-icon">AI</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Анализ бизнеса с ИИ</div>
+                        <div class="chat-last-message">Готов провести анализ вашего бизнеса</div>
+                    </div>
+                </div>
+                <div class="chat-item" data-chat="manager">
+                    <div class="chat-icon">М</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Менеджер по проектам</div>
+                        <div class="chat-last-message">Привет! Как продвигается проект?</div>
+                    </div>
+                </div>
+                <div class="chat-item" data-chat="ai-assistant">
+                    <div class="chat-icon">AI</div>
+                    <div class="chat-info">
+                        <div class="chat-name">ИИ-помощник</div>
+                        <div class="chat-last-message">Чем могу помочь с организационными вопросами?</div>
+                    </div>
+                </div>
+                <div class="chat-item" data-chat="accountant">
+                    <div class="chat-icon">Б</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Бухгалтер</div>
+                        <div class="chat-last-message">Напоминаю о сдаче отчетности до 25 числа</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Вкладка Новости -->
+        <div id="news-page" class="page hidden">
+            <h1 class="page-title">Новости и гранты</h1>
+            <p class="page-subtitle">Будьте в курсе последних событий и возможностей</p>
+            
+            <div class="news-list">
+                <div class="news-item" data-link="https://www.rbc.ru/economics/">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')">
+                        <div>Экономика</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-title">ЦБ сохранил ключевую ставку на уровне 16%</div>
+                        <div class="news-date">
+                            <i class="far fa-clock"></i> 15 марта 2024
+                        </div>
+                        <div class="news-source">Источник: РБК</div>
+                        <div class="news-excerpt">Банк России принял решение сохранить ключевую ставку на уровне 16% годовых. Решение принято с учетом сохраняющихся инфляционных рисков и стабильного роста экономики.</div>
+                        
+                        <div class="ai-analysis">
+                            <h4><i class="fas fa-brain"></i> Анализ ИИ</h4>
+                            <p>На основе анализа текущей экономической ситуации, ИИ выделил ключевые моменты:</p>
+                            <div class="ai-analysis-content">
+                                <div class="ai-analysis-item">
+                                    <h5>Влияние на бизнес</h5>
+                                    <p>Высокая ставка увеличит стоимость кредитов для малого бизнеса на 2-3%</p>
+                                </div>
+                                <div class="ai-analysis-item">
+                                    <h5>Прогноз</h5>
+                                    <p>Снижение ставки ожидается не ранее III квартала 2024 года</p>
+                                </div>
+                                <div class="ai-analysis-item">
+                                    <h5>Рекомендации</h5>
+                                    <p>Рассмотреть возможность рефинансирования существующих кредитов</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <span class="news-tag">Экономика</span>
+                        <a href="https://www.rbc.ru/economics/" class="news-link" target="_blank">
+                            Читать на сайте <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="news-item" data-link="https://grant.alfabank.ru/">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')">
+                        <div>Гранты</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-title">Стартовал прием заявок на грант "Бизнес-старт 2024"</div>
+                        <div class="news-date">
+                            <i class="far fa-clock"></i> 5 марта 2024
+                        </div>
+                        <div class="news-source">Источник: Альфа-Банк</div>
+                        <div class="news-excerpt">Минэкономразвития объявило о начале приема заявок на гранты для начинающих предпринимателей. Размер гранта - до 500 тыс. рублей на запуск бизнеса.</div>
+                        
+                        <div class="ai-analysis">
+                            <h4><i class="fas fa-brain"></i> Анализ ИИ</h4>
+                            <p>ИИ проанализировал условия гранта и подготовил рекомендации:</p>
+                            <div class="ai-analysis-content">
+                                <div class="ai-analysis-item">
+                                    <h5>Требования</h5>
+                                    <p>Бизнес должен быть зарегистрирован не более 1 года назад</p>
+                                </div>
+                                <div class="ai-analysis-item">
+                                    <h5>Приоритеты</h5>
+                                    <p>Преимущество у проектов в сфере IT, экологии и социального предпринимательства</p>
+                                </div>
+                                <div class="ai-analysis-item">
+                                    <h5>Шансы</h5>
+                                    <p>Вероятность получения гранта: 23% при качественной заявке</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <span class="news-tag">Гранты</span>
+                        <a href="https://grant.alfabank.ru/" class="news-link" target="_blank">
+                            Подать заявку <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="news-item" data-link="https://www.vedomosti.ru/economics">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')">
+                        <div>Бизнес</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-title">Малый бизнес получит новые налоговые льготы</div>
+                        <div class="news-date">
+                            <i class="far fa-clock"></i> 12 марта 2024
+                        </div>
+                        <div class="news-source">Источник: Ведомости</div>
+                        <div class="news-excerpt">Правительство анонсировало новые меры поддержки малого и среднего бизнеса, включая налоговые каникулы для начинающих предпринимателей и упрощенную систему отчетности.</div>
+                        
+                        <div class="ai-analysis">
+                            <h4><i class="fas fa-brain"></i> Анализ ИИ</h4>
+                            <p>ИИ оценил потенциальную выгоду от новых льгот:</p>
+                            <div class="ai-analysis-content">
+                                <div class="ai-analysis-item">
+                                    <h5>Экономия</h5>
+                                    <p>До 180 тыс. рублей в год для малого бизнеса</p>
+                                </div>
+                                <div class="ai-analysis-item">
+                                    <h5>Условия</h5>
+                                    <p>Льготы доступны для бизнеса с оборотом до 60 млн рублей</p>
+                                </div>
+                                <div class="ai-analysis-item">
+                                    <h5>Сроки</h5>
+                                    <p>Новые правила вступят в силу с 1 июля 2024 года</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <span class="news-tag">Налоги</span>
+                        <a href="https://www.vedomosti.ru/economics" class="news-link" target="_blank">
+                            Читать на сайте <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Окно чата -->
+    <div id="chat-window" class="chat-window">
+        <div class="chat-header">
+            <button class="close-chat"><i class="fas fa-arrow-left"></i></button>
+            <div class="chat-icon" id="chat-header-icon">AI</div>
+            <div class="chat-header-info">
+                <div class="chat-header-name" id="chat-header-name">Анализ бизнеса с ИИ</div>
+                <div class="chat-header-status" id="chat-header-status">онлайн</div>
+            </div>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Сообщения будут добавляться здесь -->
+        </div>
+        <div class="typing-indicator" id="typing-indicator">
+            <div class="typing-dots">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="chat-input" placeholder="Введите сообщение...">
+            <button class="send-button" id="send-button">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Навигация внизу экрана -->
+    <div class="bottom-nav">
+        <a href="#" class="nav-item active" data-page="courses-page">
+            <i class="fas fa-graduation-cap nav-icon"></i>
+            <span>Курсы</span>
+        </a>
+        <a href="#" class="nav-item" data-page="constructor-page">
+            <i class="fas fa-cube nav-icon"></i>
+            <span>Конструктор</span>
+        </a>
+        <a href="#" class="nav-item" data-page="chats-page">
+            <i class="fas fa-comments nav-icon"></i>
+            <span>Чаты</span>
+        </a>
+        <a href="#" class="nav-item" data-page="news-page">
+            <i class="fas fa-newspaper nav-icon"></i>
+            <span>Новости</span>
+        </a>
+    </div>
+
+    <script>
+        // Данные курсов с исправленным прогрессом
+        const coursesData = {
+            'basics': {
+                title: 'Основы предпринимательства',
+                description: 'Фундаментальные знания для начала и развития бизнеса',
+                progress: 67,
+                subtopics: [
+                    {
+                        id: 'idea',
+                        title: 'Генерация бизнес-идеи',
+                        completed: true,
+                        video: 'Видео: Методы генерации бизнес-идей',
+                        summary: 'Генерация бизнес-идеи - это первый и один из самых важных этапов создания собственного дела. Успешная идея должна решать конкретную проблему или удовлетворять потребность целевой аудитории.',
+                        content: `
+                            <p>Генерация бизнес-идеи - это первый и один из самых важных этапов создания собственного дела. Успешная идея должна решать конкретную проблему или удовлетворять потребность целеной аудитории.</p>
+                            
+                            <h3>Ключевые аспекты генерации бизнес-идей:</h3>
+                            <ul class="task-list">
+                                <li class="task-item">Анализ текущих трендов и потребностей рынка</li>
+                                <li class="task-item">Выявление неудовлетворенных потребностей потребителей</li>
+                                <li class="task-item">Использование методов креативного мышления (мозговой штурм, SCAMPER, mind mapping)</li>
+                                <li class="task-item">Оценка потенциала идей по критериям уникальности, масштабируемости и прибыльности</li>
+                                <li class="task-item">Проверка идей на соответствие вашим навыкам и ресурсам</li>
+                            </ul>
+
+                            <div class="learning-objectives">
+                                <h4><i class="fas fa-bullseye"></i> Цели обучения</h4>
+                                <ul class="task-list">
+                                    <li class="task-item">Освоить 5 методов генерации бизнес-идей</li>
+                                    <li class="task-item">Научиться оценивать потенциал идей по 4 критериям</li>
+                                    <li class="task-item">Разработать собственную бизнес-идею с учетом рыночных потребностей</li>
+                                    <li class="task-item">Понять разницу между хорошей и плохой бизнес-идеей</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-study">
+                                <h4>Кейс: Успешная бизнес-идея "Кофе с собой"</h4>
+                                <p>Рассмотрим историю создания сети кофеен "Кофе с собой". Идея появилась в 2010 году, когда основатель заметил, что люди все чаще пьют кофе на ходу, но качественных предложений на рынке практически не было.</p>
+                                <p><strong>Ключевые факторы успеха:</strong></p>
+                                <ul class="task-list">
+                                    <li class="task-item">Выявление неудовлетворенной потребности - качественный кофе навынос</li>
+                                    <li class="task-item">Простота и масштабируемость бизнес-модели</li>
+                                    <li class="task-item">Учет современных трендов - мобильность и скорость</li>
+                                    <li class="task-item">Оптимальное ценовое предложение</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="quiz-container">
+                                <div class="quiz-question">Какой из перечисленных методов НЕ относится к техникам генерации идей?</div>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="false">Мозговой штурм</div>
+                                    <div class="quiz-option" data-correct="false">Метод SCAMPER</div>
+                                    <div class="quiz-option" data-correct="true">SWOT-анализ</div>
+                                    <div class="quiz-option" data-correct="false">Ментальные карты</div>
+                                </div>
+                                <button class="submit-quiz">Проверить ответ</button>
+                                <div class="quiz-result"></div>
+                            </div>
+
+                            <div class="complex-quiz">
+                                <h4>Практическое задание: Оценка бизнес-идеи</h4>
+                                <p>Представьте, что вы рассматриваете идею открытия сервиса по доставке здорового питания в офисы. Оцените ее по следующим критериям:</p>
+                                
+                                <div class="quiz-container">
+                                    <div class="quiz-question">1. Насколько эта идея соответствует текущим трендам?</div>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="false">Не соответствует - люди предпочитают фастфуд</div>
+                                        <div class="quiz-option" data-correct="true">Полностью соответствует - растет спрос на здоровое питание</div>
+                                        <div class="quiz-option" data-correct="false">Частично соответствует - тренд есть, но слабый</div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-container">
+                                    <div class="quiz-question">2. Каков потенциал масштабирования этой идеи?</div>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="false">Ограниченный - только для крупных городов</div>
+                                        <div class="quiz-option" data-correct="false">Средний - можно развивать в региональных центрах</div>
+                                        <div class="quiz-option" data-correct="true">Высокий - возможность франшизы по всей стране</div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-container">
+                                    <div class="quiz-question">3. Какой основной риск у этой бизнес-идеи?</div>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="false">Технологический - сложная логистика</div>
+                                        <div class="quiz-option" data-correct="true">Рыночный - высокая конкуренция</div>
+                                        <div class="quiz-option" data-correct="false">Финансовый - большие первоначальные вложения</div>
+                                    </div>
+                                </div>
+                                <button class="submit-quiz">Проверить все ответы</button>
+                                <div class="quiz-result"></div>
+                            </div>
+
+                            <div class="practical-task">
+                                <h4><i class="fas fa-tasks"></i> Практическое задание</h4>
+                                <p><strong>Разработайте собственную бизнес-идею:</strong></p>
+                                <ol class="task-list">
+                                    <li class="task-item">Выберите сферу, которая вам интересна</li>
+                                    <li class="task-item">Проведите анализ рынка и выявите неудовлетворенные потребности</li>
+                                    <li class="task-item">Сгенерируйте 3 варианта бизнес-идей с использованием изученных методов</li>
+                                    <li class="task-item">Оцените каждую идею по критериям уникальности, масштабируемости и прибыльности</li>
+                                    <li class="task-item">Выберите лучшую идею и обоснуйте свой выбор</li>
+                                </ol>
+                            </div>
+
+                            <div class="additional-resources">
+                                <h4><i class="fas fa-book-open"></i> Дополнительные материалы</h4>
+                                <a href="#" class="resource-link" data-file="business-idea-checklist.pdf">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Чек-лист оценки бизнес-идеи (PDF)</span>
+                                </a>
+                                <a href="#" class="resource-link" data-file="entrepreneur-interviews.mp4">
+                                    <i class="fas fa-video"></i>
+                                    <span>Видео-интервью с успешными предпринимателями</span>
+                                </a>
+                                <a href="#" class="resource-link" data-file="market-analysis-template.xlsx">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>Шаблон анализа рынка (Excel)</span>
+                                </a>
+                                <a href="#" class="resource-link" data-file="idea-generation-book.pdf">
+                                    <i class="fas fa-book"></i>
+                                    <span>Книга "Искусство генерации идей"</span>
+                                </a>
+                            </div>
+                        `
+                    },
+                    {
+                        id: 'plan',
+                        title: 'Разработка бизнес-плана',
+                        completed: true,
+                        video: 'Видео: Структура бизнес-плана',
+                        summary: 'Бизнес-план - это документ, который описывает все аспекты будущего предприятия, анализирует проблемы, с которыми оно может столкнуться, а также определяет способы решения этих проблем.',
+                        content: `
+                            <p>Бизнес-план - это документ, который описывает все аспекты будущего предприятия, анализирует проблемы, с которыми оно может столкнуться, а также определяет способы решения этих проблем.</p>
+                            
+                            <h3>Основные разделы бизнес-плана:</h3>
+                            <ul class="task-list">
+                                <li class="task-item">Резюме проекта</li>
+                                <li class="task-item">Описание компании и продуктов/услуг</li>
+                                <li class="task-item">Анализ рынка и конкурентов</li>
+                                <li class="task-item">Маркетинговая стратегия</li>
+                                <li class="task-item">Производственный план</li>
+                                <li class="task-item">Организационная структура</li>
+                                <li class="task-item">Финансовый план</li>
+                                <li class="task-item">Анализ рисков</li>
+                            </ul>
+
+                            <div class="learning-objectives">
+                                <h4><i class="fas fa-bullseye"></i> Цели обучения</h4>
+                                <ul class="task-list">
+                                    <li class="task-item">Освоить структуру бизнес-плана</li>
+                                    <li class="task-item">Научиться проводить анализ рынка</li>
+                                    <li class="task-item">Составить финансовый прогноз на 3 года</li>
+                                    <li class="task-item">Разработать маркетинговую стратегию</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-study">
+                                <h4>Кейс: Бизнес-план кофейни</h4>
+                                <p>Рассмотрим реальный пример бизнес-плана для кофейни в центре города. Общие инвестиции составили 2 млн рублей, окупаемость - 18 месяцев.</p>
+                                <p><strong>Ключевые разделы:</strong></p>
+                                <ul class="task-list">
+                                    <li class="task-item">Резюме: концепция премиум-кофейни с собственной обжаркой</li>
+                                    <li class="task-item">Анализ рынка: исследование 15 ближайших конкурентов</li>
+                                    <li class="task-item">Финансовый план: прогноз выручки 4.5 млн рублей в год</li>
+                                    <li class="task-item">Маркетинг: стратегия продвижения через Instagram и локальные мероприятия</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="quiz-container">
+                                <div class="quiz-question">Какой раздел бизнес-плана обычно размещается первым, но пишется последним?</div>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="true">Резюме проекта</div>
+                                    <div class="quiz-option" data-correct="false">Финансовый план</div>
+                                    <div class="quiz-option" data-correct="false">Анализ рынка</div>
+                                    <div class="quiz-option" data-correct="false">Описание компании</div>
+                                </div>
+                                <button class="submit-quiz">Проверить ответ</button>
+                                <div class="quiz-result"></div>
+                            </div>
+
+                            <div class="complex-quiz">
+                                <h4>Практическое задание: Анализ финансового плана</h4>
+                                <p>Проанализируйте следующие финансовые показатели стартапа и ответьте на вопросы:</p>
+                                
+                                <div class="quiz-container">
+                                    <div class="quiz-question">1. При ежемесячных постоянных затратах 150 тыс. рублей и марже 40%, какой минимальный оборот нужен для выхода в ноль?</div>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="false">250 тыс. рублей</div>
+                                        <div class="quiz-option" data-correct="false">300 тыс. рублей</div>
+                                        <div class="quiz-option" data-correct="true">375 тыс. рублей</div>
+                                        <div class="quiz-option" data-correct="false">400 тыс. рублей</div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-container">
+                                    <div class="quiz-question">2. Какой показатель НЕ используется при анализе окупаемости проекта?</div>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="false">NPV (Чистая приведенная стоимость)</div>
+                                        <div class="quiz-option" data-correct="false">IRR (Внутренняя норма доходности)</div>
+                                        <div class="quiz-option" data-correct="true">KPI (Ключевые показатели эффективности)</div>
+                                        <div class="quiz-option" data-correct="false">PP (Срок окупаемости)</div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-container">
+                                    <div class="quiz-question">3. Что такое точка безубыточности в бизнес-плане?</div>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="false">Момент, когда бизнес начинает приносить максимальную прибыль</div>
+                                        <div class="quiz-option" data-correct="true">Объем продаж, при котором доходы равны расходам</div>
+                                        <div class="quiz-option" data-correct="false">Период, за который окупаются первоначальные инвестиции</div>
+                                        <div class="quiz-option" data-correct="false">Уровень цен, обеспечивающий конкурентоспособность</div>
+                                    </div>
+                                </div>
+                                <button class="submit-quiz">Проверить все ответы</button>
+                                <div class="quiz-result"></div>
+                            </div>
+
+                            <div class="practical-task">
+                                <h4><i class="fas fa-tasks"></i> Практическое задание</h4>
+                                <p><strong>Разработайте структуру бизнес-плана для вашего проекта:</strong></p>
+                                <ol class="task-list">
+                                    <li class="task-item">Напишите резюме проекта (1-2 страницы)</li>
+                                    <li class="task-item">Проведите анализ рынка и конкурентов</li>
+                                    <li class="task-item">Разработайте маркетинговую стратегию</li>
+                                    <li class="task-item">Составьте организационный план</li>
+                                    <li class="task-item">Подготовьте финансовый прогноз на 3 года</li>
+                                    <li class="task-item">Проанализируйте риски и пути их минимизации</li>
+                                </ol>
+                            </div>
+
+                            <div class="additional-resources">
+                                <h4><i class="fas fa-book-open"></i> Дополнительные материалы</h4>
+                                <a href="#" class="resource-link" data-file="business-plan-template.pdf">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Шаблон бизнес-плана (PDF)</span>
+                                </a>
+                                <a href="#" class="resource-link" data-file="financial-calculator.xlsx">
+                                    <i class="fas fa-calculator"></i>
+                                    <span>Калькулятор финансового планирования (Excel)</span>
+                                </a>
+                                <a href="#" class="resource-link" data-file="planning-webinar.mp4">
+                                    <i class="fas fa-video"></i>
+                                    <span>Вебинар "Ошибки в бизнес-планировании"</span>
+                                </a>
+                                <a href="#" class="resource-link" data-file="strategic-planning-book.pdf">
+                                    <i class="fas fa-book"></i>
+                                    <span>Книга "Стратегическое бизнес-планирование"</span>
+                                </a>
+                            </div>
+                        `
+                    },
+                    {
+                        id: 'legal',
+                        title: 'Юридические аспекты',
+                        completed: true,
+                        video: 'Видео: Выбор организационно-правовой формы',
+                        summary: 'Правильный выбор юридической формы для бизнеса - важное решение, которое повлияет на налогообложение, отчетность и ответственность предпринимателя.',
+                        content: `
+                            <p>Правильный выбор юридической формы для бизнеса - важное решение, которое повлияет на налогообложение, отчетность и ответственность предпринимателя.</p>
+                            
+                            <h3>Ключевые юридические аспекты:</h3>
+                            <ul class="task-list">
+                                <li class="task-item">Выбор между ИП и ООО</li>
+                                <li class="task-item">Регистрация бизнеса в налоговой</li>
+                                <li class="task-item">Выбор системы налогообложения</li>
+                                <li class="task-item">Получение необходимых лицензий и разрешений</li>
+                                <li class="task-item">Составление договоров с контрагентами</li>
+                                <li class="task-item">Защита интеллектуальной собственности</li>
+                            </ul>
+
+                            <div class="learning-objectives">
+                                <h4><i class="fas fa-bullseye"></i> Цели обучения</h4>
+                                <ul class="task-list">
+                                    <li class="task-item">Понять разницу между ИП и ООО</li>
+                                    <li class="task-item">Освоить процедуру регистрации бизнеса</li>
+                                    <li class="task-item">Выбрать оптимальную систему налогообложения</li>
+                                    <li class="task-item">Научиться составлять основные договоры</li>
+                                </ul>
+                            </div>
+
+                            <div class="case-study">
+                                <h4>Кейс: Выбор между ИП и ООО для интернет-магазина</h4>
+                                <p>Основатель интернет-магазина одежды выбрал ИП на УСН "Доходы" 6%. Это позволило ему:</p>
+                                <ul class="task-list">
+                                    <li class="task-item">Минимизировать налоговую нагрузку в первые 2 года</li>
+                                    <li class="task-item">Упростить ведение учета и отчетности</li>
+                                    <li class="task-item">Быстро зарегистрировать бизнес за 3 рабочих дня</li>
+                                    <li class="task-item">Снизить административные расходы</li>
+                                </ul>
+                                <p>Через 2 года, когда оборот превысил 5 млн рублей, бизнес был перерегистрирован в ООО.</p>
+                            </div>
+                            
+                            <div class="quiz-container">
+                                <div class="quiz-question">Какое основное преимущество ИП перед ООО?</div>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="false">Ограниченная ответственность</div>
+                                    <div class="quiz-option" data-correct="true">Простота регистрации и ведения учета</div>
+                                    <div class="quiz-option" data-correct="false">Возможность привлекать инвесторов</div>
+                                    <div class="quiz-option" data-correct="false">Высокий статус у контрагентов</div>
+                                </div>
+                                <button class="submit-quiz">Проверить ответ</button>
+                                <div class="quiz-result"></div>
+                            </div>
+
+                            <div class="complex-quiz">
+                                <h4>Практическое задание: Выбор системы налогообложения</h4>
+                                <p>Проанализируйте ситуацию и выберите оптимальную систему налогообложения:</p>
+                                
+                                <div class="quiz-container">
+                                    <div class="quiz-question">1. Для бизнеса с прогнозируемыми годовыми доходами 3 млн рублей и расходами 2 млн рублей:</div>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="false">УСН "Доходы" 6%</div>
+                                        <div class="quiz-option" data-correct="true">УСН "Доходы минус расходы" 15%</div>
+                                        <div class="quiz-option" data-correct="false">Патентная система</div>
+                                        <div class="quiz-option" data-correct="false">Общая система налогообложения</div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-container">
+                                    <div class="quiz-question">2. При работе с НДС-плательщиками выгоднее использовать:</div>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="false">УСН "Доходы"</div>
+                                        <div class="quiz-option" data-correct="false">УСН "Доходы минус расходы"</div>
+                                        <div class="quiz-option" data-correct="true">Общую систему налогообложения</div>
+                                        <div class="quiz-option" data-correct="false">Патентную систему</div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-container">
+                                    <div class="quiz-question">3. Максимальный доход для применения УСН составляет:</div>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="false">100 млн рублей</div>
+                                        <div class="quiz-option" data-correct="false">150 млн рублей</div>
+                                        <div class="quiz-option" data-correct="true">200 млн рублей</div>
+                                        <div class="quiz-option" data-correct="false">250 млн рублей</div>
+                                    </div>
+                                </div>
+                                <button class="submit-quiz">Проверить все ответы</button>
+                                <div class="quiz-result"></div>
+                            </div>
+
+                            <div class="practical-task">
+                                <h4><i class="fas fa-tasks"></i> Практическое задание</h4>
+                                <p><strong>Разработайте юридическую стратегию для вашего бизнеса:</strong></p>
+                                <ol class="task-list">
+                                    <li class="task-item">Выберите оптимальную организационно-правовую форму</li>
+                                    <li class="task-item">Определите подходящую систему налогообложения</li>
+                                    <li class="task-item">Составьте список необходимых лицензий и разрешений</li>
+                                    <li class="task-item">Разработайте шаблоны основных договоров</li>
+                                    <li class="task-item">Создайте план защиты интеллектуальной собственности</li>
+                                    <li class="task-item">Оцените юридические риски и способы их минимизации</li>
+                                </ol>
+                            </div>
+
+                            <div class="additional-resources">
+                                <h4><i class="fas fa-book-open"></i> Дополнительные материалы</h4>
+                                <a href="#" class="resource-link" data-file="ip-vs-ooo-comparison.pdf">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Сравнительная таблица ИП vs ООО (PDF)</span>
+                                </a>
+                                <a href="#" class="resource-link" data-file="tax-calculator.xlsx">
+                                    <i class="fas fa-calculator"></i>
+                                    <span>Калькулятор налоговой нагрузки</span>
+                                </a>
+                                <a href="#" class="resource-link" data-file="legal-webinar.mp4">
+                                    <i class="fas fa-video"></i>
+                                    <span>Вебинар "Юридические ловушки для начинающих предпринимателей"</span>
+                                </a>
+                                <a href="#" class="resource-link" data-file="legal-basics-book.pdf">
+                                    <i class="fas fa-book"></i>
+                                    <span>Книга "Правовые основы предпринимательства"</span>
+                                </a>
+                            </div>
+                        `
+                    },
+                    {
+                        id: 'finance',
+                        title: 'Финансовое моделирование',
+                        completed: false,
+                        video: 'Видео: Построение финансовой модели',
+                        summary: 'Финансовая модель - это инструмент для прогнозирования финансовых результатов бизнеса и оценки его инвестиционной привлекательности.',
+                        content: `Содержание для финансового моделирования...`
+                    },
+                    {
+                        id: 'team',
+                        title: 'Создание команды',
+                        completed: false,
+                        video: 'Видео: Построение эффективной команды',
+                        summary: 'Создание сильной команды - ключевой фактор успеха любого бизнеса.',
+                        content: `Содержание для создания команды...`
+                    },
+                    {
+                        id: 'pitch',
+                        title: 'Подготовка питча',
+                        completed: false,
+                        video: 'Видео: Искусство презентации бизнеса',
+                        summary: 'Умение эффектно презентовать свой бизнес - важный навык для привлечения инвестиций и партнеров.',
+                        content: `Содержание для подготовки питча...`
+                    }
+                ]
+            },
+            'finance': {
+                title: 'Финансы для бизнеса',
+                description: 'Управление финансами, налоговая оптимизация, финансовое планирование',
+                progress: 17,
+                subtopics: [
+                    {
+                        id: 'accounting',
+                        title: 'Основы финансового учета',
+                        completed: true,
+                        video: 'Видео: Принципы финансового учета',
+                        summary: 'Финансовый учет - это система сбора, регистрации и обобщения информации о деятельности организации в денежном выражении.',
+                        content: `Содержание для финансового учета...`
+                    },
+                    {
+                        id: 'budgeting',
+                        title: 'Бюджетирование и контроль',
+                        completed: false,
+                        video: 'Видео: Методы бюджетирования',
+                        summary: 'Бюджетирование позволяет эффективно управлять финансовыми ресурсами компании.',
+                        content: `Содержание для бюджетирования...`
+                    },
+                    // ... остальные подтемы
+                ]
+            },
+            'marketing': {
+                title: 'Маркетинг и продажи',
+                description: 'Цифровой маркетинг, стратегии продаж, привлечение клиентов',
+                progress: 17,
+                subtopics: [
+                    {
+                        id: 'digital',
+                        title: 'Основы цифрового маркетинга',
+                        completed: true,
+                        video: 'Видео: Тренды цифрового маркетинга 2024',
+                        summary: 'Цифровой маркетинг - это продвижение товаров и услуг с использованием цифровых каналов и технологий.',
+                        content: `Содержание для цифрового маркетинга...`
+                    },
+                    // ... остальные подтемы
+                ]
+            },
+            'hr': {
+                title: 'Управление персоналом',
+                description: 'Подбор сотрудников, мотивация команды, развитие корпоративной культуры',
+                progress: 0,
+                subtopics: [
+                    {
+                        id: 'hiring',
+                        title: 'Эффективный подбор персонала',
+                        completed: false,
+                        video: 'Видео: Современные методы рекрутинга',
+                        summary: 'Правильный подбор персонала - ключевой фактор успеха любого бизнеса.',
+                        content: `Содержание для подбора персонала...`
+                    },
+                    // ... остальные подтемы
+                ]
+            },
+            'legal': {
+                title: 'Юридические аспекты бизнеса',
+                description: 'Правовые основы предпринимательства, договорная работа, защита бизнеса',
+                progress: 17,
+                subtopics: [
+                    {
+                        id: 'contracts',
+                        title: 'Договорная работа в бизнесе',
+                        completed: true,
+                        video: 'Видео: Составление эффективных договоров',
+                        summary: 'Грамотная договорная работа защищает интересы бизнеса и минимизирует риски.',
+                        content: `Содержание для договорной работы...`
+                    },
+                    // ... остальные подтемы
+                ]
+            },
+            'digital': {
+                title: 'Цифровая трансформация',
+                description: 'Автоматизация процессов, цифровые инструменты, онлайн-присутствие',
+                progress: 0,
+                subtopics: [
+                    {
+                        id: 'automation',
+                        title: 'Автоматизация бизнес-процессов',
+                        completed: false,
+                        video: 'Видео: Инструменты автоматизации для малого бизнеса',
+                        summary: 'Автоматизация позволяет повысить эффективность бизнеса и сократить операционные расходы.',
+                        content: `Содержание для автоматизации...`
+                    },
+                    // ... остальные подтемы
+                ]
+            }
+        };
+
+        // Навигация по приложению
+        document.addEventListener('DOMContentLoaded', function() {
+            // Переключение между вкладками
+            const navItems = document.querySelectorAll('.nav-item');
+            const pages = document.querySelectorAll('.page');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Убираем активный класс у всех элементов навигации
+                    navItems.forEach(navItem => {
+                        navItem.classList.remove('active');
+                    });
+                    
+                    // Добавляем активный класс к текущему элементу
+                    this.classList.add('active');
+                    
+                    // Скрываем все страницы
+                    pages.forEach(page => {
+                        page.classList.add('hidden');
+                    });
+                    
+                    // Показываем выбранную страницу
+                    const targetPage = this.getAttribute('data-page');
+                    document.getElementById(targetPage).classList.remove('hidden');
+                });
+            });
+            
+            // Функционал курсов
+            const courseCategories = document.querySelectorAll('.course-category');
+            const courseDetail = document.getElementById('course-detail');
+            const subtopicDetail = document.getElementById('subtopic-detail');
+            const backToCourses = document.getElementById('back-to-courses');
+            const backToCourse = document.getElementById('back-to-course');
+            
+            // Открытие деталей курса
+            courseCategories.forEach(category => {
+                category.addEventListener('click', function() {
+                    const courseId = this.getAttribute('data-course');
+                    openCourse(courseId);
+                });
+            });
+            
+            // Функция для обновления прогресса курса
+            function updateCourseProgress(courseId) {
+                const course = coursesData[courseId];
+                const completedSubtopics = course.subtopics.filter(subtopic => subtopic.completed).length;
+                const totalSubtopics = course.subtopics.length;
+                const progress = Math.round((completedSubtopics / totalSubtopics) * 100);
+                
+                // Обновляем данные курса
+                course.progress = progress;
+                
+                // Обновляем отображение
+                if (document.getElementById('course-detail').style.display !== 'none') {
+                    document.getElementById('course-progress-fill').style.width = `${progress}%`;
+                    document.getElementById('course-progress-text').textContent = `${progress}% завершено`;
+                }
+                
+                // Обновляем прогресс в списке курсов
+                const courseElement = document.querySelector(`[data-course="${courseId}"] .progress-fill`);
+                const courseText = document.querySelector(`[data-course="${courseId}"] .course-progress`);
+                if (courseElement) {
+                    courseElement.style.width = `${progress}%`;
+                    courseText.textContent = `${progress}% завершено`;
+                }
+            }
+            
+            // Открытие деталей курса
+            function openCourse(courseId) {
+                const course = coursesData[courseId];
+                
+                // Заполняем данные курса
+                document.getElementById('course-title').textContent = course.title;
+                document.getElementById('course-description').textContent = course.description;
+                document.getElementById('course-progress-fill').style.width = `${course.progress}%`;
+                document.getElementById('course-progress-text').textContent = `${course.progress}% завершено`;
+                
+                // Заполняем список подтем
+                const subtopicsList = document.getElementById('course-subtopics');
+                subtopicsList.innerHTML = '';
+                
+                course.subtopics.forEach(subtopic => {
+                    const li = document.createElement('li');
+                    li.className = 'subtopic-item';
+                    li.setAttribute('data-subtopic', subtopic.id);
+                    
+                    const statusClass = subtopic.completed ? 'completed' : '';
+                    
+                    li.innerHTML = `
+                        <span class="subtopic-name">${subtopic.title}</span>
+                        <span class="subtopic-status ${statusClass}">${subtopic.completed ? 'Пройдено' : 'Не начато'}</span>
+                    `;
+                    
+                    li.addEventListener('click', function() {
+                        openSubtopic(courseId, subtopic.id);
+                    });
+                    
+                    subtopicsList.appendChild(li);
+                });
+                
+                // Показываем детали курса
+                document.querySelector('.course-categories').style.display = 'none';
+                courseDetail.style.display = 'block';
+            }
+            
+            // Открытие деталей подтемы
+            function openSubtopic(courseId, subtopicId) {
+                const course = coursesData[courseId];
+                const subtopic = course.subtopics.find(s => s.id === subtopicId);
+                
+                // Заполняем данные подтемы
+                document.getElementById('subtopic-title').textContent = subtopic.title;
+                document.querySelector('.video-title').textContent = subtopic.video;
+                document.querySelector('.summary-content').innerHTML = `
+                    <h4>Конспект урока:</h4>
+                    <p>${subtopic.summary}</p>
+                `;
+                document.querySelector('.subtopic-description').innerHTML = subtopic.content;
+                
+                // Показываем детали подтемы
+                courseDetail.style.display = 'none';
+                subtopicDetail.style.display = 'block';
+                
+                // Добавляем обработчики для квиза
+                setupQuiz();
+                
+                // Настраиваем загрузку файлов
+                setupFileDownloads();
+            }
+            
+            // Настройка функционала квиза
+            function setupQuiz() {
+                // Обработка одиночных вопросов
+                const singleQuizContainers = document.querySelectorAll('.quiz-container');
+                
+                singleQuizContainers.forEach(container => {
+                    const quizOptions = container.querySelectorAll('.quiz-option');
+                    const submitButton = container.querySelector('.submit-quiz');
+                    const quizResult = container.querySelector('.quiz-result');
+                    
+                    quizOptions.forEach(option => {
+                        option.addEventListener('click', function() {
+                            // Убираем выделение у всех вариантов в этом контейнере
+                            container.querySelectorAll('.quiz-option').forEach(opt => {
+                                opt.classList.remove('selected');
+                            });
+                            
+                            // Выделяем выбранный вариант
+                            this.classList.add('selected');
+                        });
+                    });
+                    
+                    if (submitButton) {
+                        submitButton.addEventListener('click', function() {
+                            const selectedOption = container.querySelector('.quiz-option.selected');
+                            
+                            if (!selectedOption) {
+                                alert('Пожалуйста, выберите вариант ответа');
+                                return;
+                            }
+                            
+                            const isCorrect = selectedOption.getAttribute('data-correct') === 'true';
+                            
+                            if (isCorrect) {
+                                quizResult.textContent = 'Правильно! ✓';
+                                quizResult.className = 'quiz-result correct';
+                            } else {
+                                quizResult.textContent = 'Неправильно. Попробуйте еще раз.';
+                                quizResult.className = 'quiz-result incorrect';
+                            }
+                            
+                            quizResult.style.display = 'block';
+                        });
+                    }
+                });
+                
+                // Обработка комплексных тестов (несколько вопросов)
+                const complexQuizzes = document.querySelectorAll('.complex-quiz');
+                
+                complexQuizzes.forEach(complexQuiz => {
+                    const submitButton = complexQuiz.querySelector('.submit-quiz');
+                    const quizResult = complexQuiz.querySelector('.quiz-result');
+                    const questions = complexQuiz.querySelectorAll('.quiz-container');
+                    
+                    // Обработка выбора ответов в комплексных тестах
+                    questions.forEach(question => {
+                        const options = question.querySelectorAll('.quiz-option');
+                        options.forEach(option => {
+                            option.addEventListener('click', function() {
+                                // Убираем выделение у всех вариантов в этом вопросе
+                                question.querySelectorAll('.quiz-option').forEach(opt => {
+                                    opt.classList.remove('selected');
+                                });
+                                
+                                // Выделяем выбранный вариант
+                                this.classList.add('selected');
+                            });
+                        });
+                    });
+                    
+                    if (submitButton) {
+                        submitButton.addEventListener('click', function() {
+                            let allAnswered = true;
+                            let correctAnswers = 0;
+                            let totalQuestions = 0;
+                            
+                            questions.forEach(question => {
+                                totalQuestions++;
+                                const selectedOption = question.querySelector('.quiz-option.selected');
+                                
+                                if (!selectedOption) {
+                                    allAnswered = false;
+                                    return;
+                                }
+                                
+                                const isCorrect = selectedOption.getAttribute('data-correct') === 'true';
+                                if (isCorrect) {
+                                    correctAnswers++;
+                                }
+                            });
+                            
+                            if (!allAnswered) {
+                                alert('Пожалуйста, ответьте на все вопросы перед проверкой');
+                                return;
+                            }
+                            
+                            const percentage = Math.round((correctAnswers / totalQuestions) * 100);
+                            
+                            if (percentage === 100) {
+                                quizResult.textContent = `Отлично! Все ответы правильные! (${correctAnswers}/${totalQuestions})`;
+                                quizResult.className = 'quiz-result correct';
+                            } else {
+                                quizResult.textContent = `Правильных ответов: ${correctAnswers} из ${totalQuestions} (${percentage}%)`;
+                                quizResult.className = 'quiz-result incorrect';
+                            }
+                            
+                            quizResult.style.display = 'block';
+                            
+                            // Подсвечиваем правильные и неправильные ответы
+                            questions.forEach(question => {
+                                const options = question.querySelectorAll('.quiz-option');
+                                options.forEach(option => {
+                                    const isCorrect = option.getAttribute('data-correct') === 'true';
+                                    const isSelected = option.classList.contains('selected');
+                                    
+                                    if (isSelected && isCorrect) {
+                                        option.style.backgroundColor = 'rgba(16, 185, 129, 0.2)';
+                                        option.style.borderColor = 'var(--alfa-success)';
+                                    } else if (isSelected && !isCorrect) {
+                                        option.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
+                                        option.style.borderColor = 'var(--alfa-error)';
+                                    } else if (!isSelected && isCorrect) {
+                                        option.style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
+                                        option.style.borderColor = 'var(--alfa-success)';
+                                    }
+                                });
+                            });
+                        });
+                    }
+                });
+            }
+            
+            // Настройка загрузки файлов
+            function setupFileDownloads() {
+                document.querySelectorAll('.resource-link').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const fileName = this.getAttribute('data-file');
+                        
+                        // Создаем временный файл для демонстрации
+                        const fileContent = `Это демонстрационный файл: ${fileName}\n\nСпасибо за использование платформы Альфа-Бизнес!`;
+                        const blob = new Blob([fileContent], { type: 'application/octet-stream' });
+                        const url = URL.createObjectURL(blob);
+                        
+                        // Создаем временную ссылку для скачивания
+                        const tempLink = document.createElement('a');
+                        tempLink.href = url;
+                        tempLink.download = fileName;
+                        document.body.appendChild(tempLink);
+                        tempLink.click();
+                        document.body.removeChild(tempLink);
+                        URL.revokeObjectURL(url);
+                        
+                        // В реальном приложении здесь будет запрос к бэкенду:
+                        // fetch(`/api/download/${fileName}`)
+                        //     .then(response => response.blob())
+                        //     .then(blob => {
+                        //         // Скачивание файла
+                        //     });
+                    });
+                });
+            }
+            
+            // Кнопка "Назад к курсам"
+            backToCourses.addEventListener('click', function() {
+                courseDetail.style.display = 'none';
+                document.querySelector('.course-categories').style.display = 'flex';
+            });
+            
+            // Кнопка "Назад к курсу"
+            backToCourse.addEventListener('click', function() {
+                subtopicDetail.style.display = 'none';
+                courseDetail.style.display = 'block';
+            });
+            
+            // Кнопка "Отметить как завершенное"
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('mark-complete') || e.target.closest('.mark-complete')) {
+                    const button = e.target.classList.contains('mark-complete') ? e.target : e.target.closest('.mark-complete');
+                    const currentSubtopicTitle = document.getElementById('subtopic-title').textContent;
+                    const currentCourse = Object.keys(coursesData).find(courseId => 
+                        coursesData[courseId].subtopics.some(subtopic => 
+                            subtopic.title === currentSubtopicTitle
+                        )
+                    );
+                    
+                    if (currentCourse) {
+                        const subtopic = coursesData[currentCourse].subtopics.find(s => s.title === currentSubtopicTitle);
+                        if (subtopic && !subtopic.completed) {
+                            subtopic.completed = true;
+                            updateCourseProgress(currentCourse);
+                            alert('Подтема отмечена как завершенная! Прогресс обновлен.');
+                            
+                            // Обновляем статус в интерфейсе
+                            const statusElement = document.querySelector(`[data-subtopic="${subtopic.id}"] .subtopic-status`);
+                            if (statusElement) {
+                                statusElement.textContent = 'Пройдено';
+                                statusElement.classList.add('completed');
+                            }
+                        } else {
+                            alert('Эта подтема уже завершена!');
+                        }
+                    }
+                }
+            });
+            
+            // Функционал конструктора (квиза)
+            const quizOptions = document.querySelectorAll('.quiz-option-main');
+            const nextBtn = document.getElementById('next-btn');
+            const prevBtn = document.getElementById('prev-btn');
+            const restartBtn = document.getElementById('restart-quiz-btn');
+            const quizContainer = document.getElementById('quiz-container-main');
+            const resultsContainer = document.getElementById('results-container');
+            
+            let currentQuestion = 1;
+            const totalQuestions = 7;
+            const userAnswers = {};
+            
+            // Обработка выбора варианта ответа
+            quizOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const questionId = this.closest('.quiz-question-main').id;
+                    
+                    // Убираем выделение у всех вариантов в текущем вопросе
+                    this.closest('.quiz-question-main').querySelectorAll('.quiz-option-main').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    
+                    // Выделяем выбранный вариант
+                    this.classList.add('selected');
+                    
+                    // Сохраняем ответ
+                    userAnswers[questionId] = this.getAttribute('data-value');
+                    
+                    // Активируем кнопку "Далее"
+                    nextBtn.disabled = false;
+                });
+            });
+            
+            // Переход к следующему вопросу
+            nextBtn.addEventListener('click', function() {
+                const currentQuestionId = `quiz-question-${currentQuestion}`;
+                
+                // Проверяем, выбран ли ответ
+                if (!userAnswers[currentQuestionId]) {
+                    alert('Пожалуйста, выберите ответ перед переходом к следующему вопросу');
+                    return;
+                }
+                
+                // Скрываем текущий вопрос
+                document.getElementById(currentQuestionId).classList.add('hidden');
+                
+                // Если это последний вопрос, показываем результаты
+                if (currentQuestion === totalQuestions) {
+                    showResults();
+                    return;
+                }
+                
+                // Показываем следующий вопрос
+                currentQuestion++;
+                document.getElementById(`quiz-question-${currentQuestion}`).classList.remove('hidden');
+                
+                // Активируем кнопку "Назад"
+                prevBtn.disabled = false;
+                
+                // Деактивируем кнопку "Далее" до выбора ответа
+                nextBtn.disabled = true;
+                
+                // Обновляем прогресс
+                updateQuizProgress();
+                
+                // Если это последний вопрос, меняем текст кнопки
+                if (currentQuestion === totalQuestions) {
+                    nextBtn.innerHTML = 'Завершить <i class="fas fa-check"></i>';
+                }
+            });
+            
+            // Переход к предыдущему вопросу
+            prevBtn.addEventListener('click', function() {
+                // Скрываем текущий вопрос
+                document.getElementById(`quiz-question-${currentQuestion}`).classList.add('hidden');
+                
+                // Показываем предыдущий вопрос
+                currentQuestion--;
+                document.getElementById(`quiz-question-${currentQuestion}`).classList.remove('hidden');
+                
+                // Если вернулись к первому вопросу, деактивируем кнопку "Назад"
+                if (currentQuestion === 1) {
+                    prevBtn.disabled = true;
+                }
+                
+                // Активируем кнопку "Далее" если ответ уже выбран
+                const currentQuestionId = `quiz-question-${currentQuestion}`;
+                if (userAnswers[currentQuestionId]) {
+                    nextBtn.disabled = false;
+                    
+                    // Восстанавливаем выбранный ответ
+                    const selectedOption = document.querySelector(`#${currentQuestionId} .quiz-option-main[data-value="${userAnswers[currentQuestionId]}"]`);
+                    if (selectedOption) {
+                        // Сначала снимаем выделение со всех
+                        document.querySelectorAll(`#${currentQuestionId} .quiz-option-main`).forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+                        // Затем выделяем сохраненный
+                        selectedOption.classList.add('selected');
+                    }
+                } else {
+                    nextBtn.disabled = true;
+                }
+                
+                // Возвращаем стандартный текст кнопки "Далее"
+                if (currentQuestion < totalQuestions) {
+                    nextBtn.innerHTML = 'Далее <i class="fas fa-arrow-right"></i>';
+                }
+                
+                // Обновляем прогресс
+                updateQuizProgress();
+            });
+            
+            // Показать результаты
+            function showResults() {
+                quizContainer.style.display = 'none';
+                resultsContainer.style.display = 'block';
+                
+                // Генерация персонализированных рекомендаций на основе ответов
+                generatePersonalizedRecommendations();
+            }
+            
+            // Генерация персонализированных рекомендаций
+            function generatePersonalizedRecommendations() {
+                // Анализ ответов пользователя
+                const businessStage = userAnswers['quiz-question-1'];
+                const businessGoal = userAnswers['quiz-question-2'];
+                const teamSize = userAnswers['quiz-question-3'];
+                const turnover = userAnswers['quiz-question-4'];
+                const businessField = userAnswers['quiz-question-5'];
+                const clientChannel = userAnswers['quiz-question-6'];
+                const mainProblem = userAnswers['quiz-question-7'];
+                
+                // Логика подбора рекомендаций на основе ответов
+                if (businessStage === 'idea' || businessStage === 'startup') {
+                    document.querySelector('.results-category h3').innerHTML = 'Финансовые решения <span class="match-percentage">92%</span>';
+                } else if (businessStage === 'growth') {
+                    document.querySelector('.results-category h3').innerHTML = 'Финансовые решения <span class="match-percentage">88%</span>';
+                } else {
+                    document.querySelector('.results-category h3').innerHTML = 'Финансовые решения <span class="match-percentage">85%</span>';
+                }
+                
+                if (clientChannel === 'word' || clientChannel === 'partners') {
+                    document.querySelectorAll('.results-category h3')[1].innerHTML = 'Маркетинговые решения <span class="match-percentage">78%</span>';
+                } else {
+                    document.querySelectorAll('.results-category h3')[1].innerHTML = 'Маркетинговые решения <span class="match-percentage">85%</span>';
+                }
+                
+                if (mainProblem === 'team' || mainProblem === 'process') {
+                    document.querySelectorAll('.results-category h3')[2].innerHTML = 'Операционные решения <span class="match-percentage">82%</span>';
+                } else {
+                    document.querySelectorAll('.results-category h3')[2].innerHTML = 'Операционные решения <span class="match-percentage">78%</span>';
+                }
+            }
+            
+            // Перезапуск квиза
+            restartBtn.addEventListener('click', function() {
+                currentQuestion = 1;
+                Object.keys(userAnswers).forEach(key => delete userAnswers[key]);
+                
+                // Скрываем результаты
+                resultsContainer.style.display = 'none';
+                
+                // Показываем первый вопрос
+                document.querySelectorAll('.quiz-question-main').forEach((question, index) => {
+                    if (index === 0) {
+                        question.classList.remove('hidden');
+                    } else {
+                        question.classList.add('hidden');
+                    }
+                });
+                
+                // Сбрасываем выделение ответов
+                document.querySelectorAll('.quiz-option-main').forEach(option => {
+                    option.classList.remove('selected');
+                });
+                
+                // Сбрасываем кнопки навигации
+                prevBtn.disabled = true;
+                nextBtn.disabled = true;
+                nextBtn.innerHTML = 'Далее <i class="fas fa-arrow-right"></i>';
+                
+                // Показываем контейнер викторины
+                quizContainer.style.display = 'block';
+                
+                // Обновляем прогресс
+                updateQuizProgress();
+            });
+            
+            // Функция обновления прогресса квиза
+            function updateQuizProgress() {
+                document.getElementById('current-question').textContent = currentQuestion;
+                
+                const progressPercentage = (currentQuestion / totalQuestions) * 100;
+                document.getElementById('quiz-progress-fill').style.width = `${progressPercentage}%`;
+                document.querySelector('.quiz-progress').textContent = `${Math.round(progressPercentage)}% завершено`;
+            }
+            
+            // Логика чатов
+            let currentChat = null;
+            const chatData = {
+                'ai-analysis': {
+                    name: 'Анализ бизнеса с ИИ',
+                    icon: 'AI',
+                    status: 'онлайн',
+                    messages: [
+                        {
+                            text: 'Добро пожаловать! Я - ИИ-аналитик Альфа-Банка. Я могу провести комплексный анализ вашего бизнеса, оценить риски и спрогнозировать развитие ситуации на рынке. Расскажите о вашем бизнесе!',
+                            time: '12:00',
+                            sender: 'bot'
+                        }
+                    ]
+                },
+                'manager': {
+                    name: 'Менеджер по проектам',
+                    icon: 'М',
+                    status: 'был(а) недавно',
+                    messages: [
+                        {
+                            text: 'Здравствуйте! Я ваш менеджер по проектам. Готова помочь с проработкой вашего бизнес-проекта.',
+                            time: '11:30',
+                            sender: 'bot'
+                        }
+                    ]
+                },
+                'ai-assistant': {
+                    name: 'ИИ-помощник',
+                    icon: 'AI',
+                    status: 'онлайн',
+                    messages: [
+                        {
+                            text: 'Привет! Я ваш ИИ-помощник. Могу ответить на любые организационные вопросы о ведении бизнеса.',
+                            time: '10:45',
+                            sender: 'bot'
+                        }
+                    ]
+                },
+                'accountant': {
+                    name: 'Бухгалтер',
+                    icon: 'Б',
+                    status: 'был(а) 2 часа назад',
+                    messages: [
+                        {
+                            text: 'Добрый день! Я ваш бухгалтер. Помогу с вопросами отчетности, налогов и финансового учета.',
+                            time: '09:15',
+                            sender: 'bot'
+                        }
+                    ]
+                }
+            };
+            
+            // Открытие чата
+            document.querySelectorAll('.chat-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const chatId = this.getAttribute('data-chat');
+                    openChat(chatId);
+                });
+            });
+            
+            // Функция открытия чата
+            function openChat(chatId) {
+                currentChat = chatId;
+                const chat = chatData[chatId];
+                
+                // Заполняем заголовок чата
+                document.getElementById('chat-header-name').textContent = chat.name;
+                document.getElementById('chat-header-icon').textContent = chat.icon;
+                document.getElementById('chat-header-status').textContent = chat.status;
+                
+                // Очищаем сообщения
+                const messagesContainer = document.getElementById('chat-messages');
+                messagesContainer.innerHTML = '';
+                
+                // Добавляем сообщения (без дублирования)
+                chat.messages.forEach(msg => {
+                    addMessageToChat(msg.text, msg.sender, msg.time, false);
+                });
+                
+                // Показываем окно чата
+                document.getElementById('chat-window').style.display = 'flex';
+                
+                // Прокручиваем вниз
+                setTimeout(() => {
+                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                }, 100);
+            }
+            
+            // Закрытие чата
+            document.querySelector('.close-chat').addEventListener('click', function() {
+                document.getElementById('chat-window').style.display = 'none';
+                currentChat = null;
+            });
+            
+            // Отправка сообщения
+            document.getElementById('send-button').addEventListener('click', sendMessage);
+            document.getElementById('chat-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            // Функция отправки сообщения
+            function sendMessage() {
+                const input = document.getElementById('chat-input');
+                const message = input.value.trim();
+                
+                if (message === '' || !currentChat) return;
+                
+                // Добавляем сообщение пользователя
+                addMessageToChat(message, 'user', getCurrentTime(), true);
+                
+                // Очищаем поле ввода
+                input.value = '';
+                
+                // Показываем индикатор набора
+                showTypingIndicator();
+                
+                // Имитируем ответ бота
+                setTimeout(() => {
+                    hideTypingIndicator();
+                    const response = generateBotResponse(currentChat, message);
+                    addMessageToChat(response, 'bot', getCurrentTime(), true);
+                }, 1500);
+            }
+            
+            // Добавление сообщения в чат
+            function addMessageToChat(text, sender, time, animate) {
+                const messagesContainer = document.getElementById('chat-messages');
+                const messageElement = document.createElement('div');
+                messageElement.className = `message ${sender}`;
+                
+                if (animate) {
+                    messageElement.style.opacity = '0';
+                    messageElement.style.transform = 'translateY(10px)';
+                }
+                
+                messageElement.innerHTML = `
+                    <div>${text}</div>
+                    <div class="message-time">${time}</div>
+                `;
+                
+                messagesContainer.appendChild(messageElement);
+                
+                if (animate) {
+                    setTimeout(() => {
+                        messageElement.style.opacity = '1';
+                        messageElement.style.transform = 'translateY(0)';
+                    }, 10);
+                }
+                
+                // Прокручиваем вниз
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+            
+            // Показать индикатор набора
+            function showTypingIndicator() {
+                document.getElementById('typing-indicator').style.display = 'block';
+                const messagesContainer = document.getElementById('chat-messages');
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+            
+            // Скрыть индикатор набора
+            function hideTypingIndicator() {
+                document.getElementById('typing-indicator').style.display = 'none';
+            }
+            
+            // Генерация ответа бота
+            function generateBotResponse(chatId, userMessage) {
+                const lowerMessage = userMessage.toLowerCase();
+                
+                if (chatId === 'ai-analysis') {
+                    if (lowerMessage.includes('анализ') || lowerMessage.includes('оценк') || lowerMessage.includes('риск')) {
+                        const responses = [
+                            "🔍 Провожу глубинный анализ вашего бизнеса... На основе 127+ параметров и текущих рыночных паттернов вижу: потенциал роста 18-23% в следующем квартале. Ключевые драйверы: сезонный спрос + цифровизация процессов. Основные риски: волатильность сырьевых рынков (-12% к марже) и изменения в налоговом законодательстве. 🎯 Рекомендация: диверсифицировать поставщиков на 3 источника и создать финансовый буфер в 15% от оборота.",
+                            
+                            "📊 Только что завершил мультифакторный анализ. Ваш бизнес показывает устойчивость выше среднего по отрасли на 34%. 🤖 Нейросеть выявила скрытую корреляцию: каждый 1% инвестиций в автоматизацию дает +2.3% к производительности. 💡 Инсайт: оптимизация логистики может снизить операционные расходы на 17% уже в следующем квартале.",
+                            
+                            "⚡ Мгновенный анализ завершен! Обнаружены 3 критические точки роста: 1) Цифровое присутствие - потенциал +45% клиентов, 2) Удержание клиентов - можно улучшить на 28%, 3) Операционная эффективность - резерв +19%. 🚀 Приоритет: фокус на клиентском опыте - это даст максимальную ROI 312% по моим расчетам."
+                        ];
+                        return responses[Math.floor(Math.random() * responses.length)];
+                        
+                    } else if (lowerMessage.includes('прогноз') || lowerMessage.includes('будущ') || lowerMessage.includes('перспектив')) {
+                        const responses = [
+                            "🔮 Запускаю предиктивную аналитику... На основе анализа 15,000+ похожих бизнес-моделей прогнозирую: ваша ниша вырастет на 9.7% в следующем году. 📈 Ваш потенциал роста: 22-28% при условии цифровой трансформации. 💎 Алгоритм обнаружил незанятую нишу в сегменте B2B2C - потенциал дополнительных 1.2 млн рублей в месяц.",
+                            
+                            "🎯 Прогноз на основе ML-модели: следующие 6 месяцев - окно возможностей для экспансии. Рынок вашего региона показывает аномальный рост +14% против средних +7%. ⚡ Срочная рекомендация: увеличить маркетинговый бюджет на 25% именно сейчас для захвата рыночной доли.",
+                            
+                            "📈 Тренд-анализ выявил интересный паттерн: ваши конкуренты недооценивают мобильный трафик. Прогноз: мобильные продажи вырастут на 67% в следующем квартале. 🎮 Рекомендую перераспределить 40% рекламного бюджета в mobile-first стратегию."
+                        ];
+                        return responses[Math.floor(Math.random() * responses.length)];
+                        
+                    } else if (lowerMessage.includes('финанс') || lowerMessage.includes('деньги') || lowerMessage.includes('бюджет') || lowerMessage.includes('кредит')) {
+                        const responses = [
+                            "💰 Глубокий финансовый анализ показал: ваша операционная маржа может быть улучшена на 8.3 пункта. 💡 Конкретные действия: автоматизация отчетности (-3.2% затрат), реструктуризация долга (-1.8%), оптимизация закупок (-3.3%). 🚀 Общий эффект: +2.1 млн рублей в год при текущих оборотах.",
+                            
+                            "💳 Анализ финансовых потоков выявил: 23% оборотных средств используются неэффективно. 🔄 Решение: внедрение казначейства даст +4.7% к рентабельности. 📊 По нашим данным, рефинансирование кредитов под 11.5% вместо текущих 14.2% сэкономит 380,000 рублей ежегодно.",
+                            
+                            "🎪 Финмоделирование показало удивительный результат: перераспределение всего 15% бюджета из традиционного маркетинга в performance-каналы увеличит LTV клиента на 42%. 💎 Ключевая находка: ваши постоянные клиенты приносят в 3.7 раза больше прибыли, чем считалось ранее."
+                        ];
+                        return responses[Math.floor(Math.random() * responses.length)];
+                        
+                    } else if (lowerMessage.includes('конкурент') || lowerMessage.includes('соперник') || lowerMessage.includes('рынок')) {
+                        return "🎪 Анализ конкурентного поля завершен. Обнаружено: 72% конкурентов используют устаревшие бизнес-модели. 💎 Ваше ключевое преимущество: клиентский сервис (оценка 4.7/5 против средних 3.9). 🚀 Рекомендация: усиливать именно это преимущество - каждый +0.1 балл к сервису дает +5.3% к удержанию клиентов.";
+                        
+                    } else if (lowerMessage.includes('инвест') || lowerMessage.includes('расшир') || lowerMessage.includes('масштаб')) {
+                        return "📊 Инвестиционный анализ: текущая рентабельность 18.7% против среднерыночных 12.4%. 🎯 Оптимальная стратегия роста: поэтапное расширение с фокусом на 2 самых прибыльных региона. 💰 Расчет: инвестиции 3.5 млн рублей принесут 6.2 млн за 18 месяцев (ROI 77%).";
+                        
+                    } else {
+                        const responses = [
+                            "🤖 ИИ-аналитик к вашим услугам! Проанализировал 2,347+ бизнес-кейсов в вашей отрасли. Могу предоставить: глубокий финансовый анализ, оценку рисков, прогноз развития, конкурентный анализ или подобрать оптимальную стратегию роста. Что вас интересует в первую очередь?",
+                            
+                            "🎯 Зафиксировал ваш запрос. Как продвинутый ИИ, я специализируюсь на data-driven решениях для бизнеса. Только что просканировал 15 рыночных индикаторов - сейчас идеальное время для оптимизации. Куда направим наш аналитический фокус?",
+                            
+                            "📈 Готов к работе! Мои алгоритмы обработали 1.2 ТБ данных о вашем рыночном сегменте. Обнаружены 3 скрытые возможности для роста. Хотите получить персонализированный анализ или есть конкретный бизнес-вопрос?"
+                        ];
+                        return responses[Math.floor(Math.random() * responses.length)];
+                    }
+                    
+                } else if (chatId === 'manager') {
+                    if (lowerMessage.includes('проект') || lowerMessage.includes('план') || lowerMessage.includes('стратеги')) {
+                        const responses = [
+                            "🎯 Только что проанализировала ваш проект через нашу систему управления. Вижу отличный потенциал! 📋 Разработала детальный план на 12 недель: 1-4 недели: MVP запуск, 5-8: сбор метрик, 9-12: масштабирование. 💡 Ключевая идея: стартовать с пилотной группы из 50 клиентов для валидации гипотез.",
+                            
+                            "📊 Изучила ваш кейс. Рекомендую agile-подход с двухнедельными спринтами. 🚀 Первый спринт: фокус на ценностном предложении - это даст 80% результата при 20% усилий. 💎 Наш опыт показывает: такой подход ускоряет выход на окупаемость на 40%.",
+                            
+                            "🌟 Ваш проект попал в топ-15% по потенциалу среди наших клиентов! 🎪 Разработала эксклюзивную roadmap: Phase 1 (30 дней) - продукт-маркет фит, Phase 2 (60 дней) - рост, Phase 3 (90 дней) - масштаб. 📞 Давайте созвонимся завтра в 11:00 для детального обсуждения?"
+                        ];
+                        return responses[Math.floor(Math.random() * responses.length)];
+                        
+                    } else if (lowerMessage.includes('срок') || lowerMessage.includes('врем') || lowerMessage.includes('когда')) {
+                        return "⏰ Проанализировала временные рамки. Реализация займет 67 дней против стандартных 94 благодаря нашим оптимизированным процессам. 🎯 Критический путь: первые 14 дней - прототипирование. 💡 Ускорение возможно на 23% при использовании наших готовых модулей.";
+                        
+                    } else if (lowerMessage.includes('бюджет') || lowerMessage.includes('стоимость') || lowerMessage.includes('цена')) {
+                        return "💰 Рассчитала бюджет проекта. Оптимальное распределение: 40% - разработка, 25% - маркетинг, 20% - операционные расходы, 15% - резерв. 💎 Экономия 18% возможна при использовании наших партнерских программ. 📊 ROI прогнозируется на уровне 214% за 12 месяцев.";
+                        
+                    } else {
+                        const responses = [
+                            "👋 Рада вас слышать! Как ваш персональный менеджер, я уже начала проработку вашего проекта. 📈 На основе 127 успешных кейсов вижу 3 оптимальных сценария развития. Какой аспект бизнеса хотите обсудить в первую очередь?",
+                            
+                            "🎯 Готова помочь с реализацией вашей бизнес-идеи! Только что проанализировала рыночные тренды - ваш проект идеально вписывается в текущие потребности. 📋 Предлагаю начать с глубокого анализа целевой аудитории - это основа успешного старта.",
+                            
+                            "✨ Заметка в вашем деле: высокий потенциал синергии с нашими текущими партнерами. 🚀 Готова организовать нетворкинг-сессию + предложить индивидуальный план развития. Что для вас приоритетнее сейчас: быстрый запуск или фундаментальная проработка?"
+                        ];
+                        return responses[Math.floor(Math.random() * responses.length)];
+                    }
+                    
+                } else if (chatId === 'ai-assistant') {
+                    if (lowerMessage.includes('налог') || lowerMessage.includes('отчетност') || lowerMessage.includes('усн')) {
+                        const responses = [
+                            "🧾 Мгновенный налоговый анализ: для вашего бизнеса УСН 6% выгоднее на 23,400 рублей в год. 💡 Лайфхак: оформление части расходов как представительских увеличит налоговую экономию еще на 18%. 📅 Ближайший дедлайн: 25 апреля - авансовый платеж за 1 квартал.",
+                            
+                            "📊 Налоговая оптимизация: обнаружена возможность перехода на патентную систему - экономия 31% в год. ⚠️ Важно: до 30 апреля нужно подать уведомление. 🎯 Рекомендую: совмещать УСН и патент для разных направлений деятельности.",
+                            
+                            "💡 Только что просканировал изменения в НК РФ. Обнаружена новая льгота для вашего сегмента: налоговый вычет до 300К рублей за цифровизацию. 📝 Нужно подать заявление до 1 июня. 🚀 Это снизит вашу налоговую нагрузку на 42% в этом году."
+                        ];
+                        return responses[Math.floor(Math.random() * responses.length)];
+                        
+                    } else if (lowerMessage.includes('сотрудник') || lowerMessage.includes('персонал') || lowerMessage.includes('найм')) {
+                        return "👥 Анализ HR-процессов: текучесть кадров можно снизить на 28% через систему грейдов. 💰 Экономия: 120K рублей ежемесячно. 🎯 Рекомендация: внедрить KPI-систему + бонусы за результат - это увеличит производительность на 17%.";
+                        
+                    } else if (lowerMessage.includes('договор') || lowerMessage.includes('юрист') || lowerMessage.includes('прав')) {
+                        return "⚖️ Юридический аудит: 83% ваших типовых договоров соответствуют требованиям. 🎯 Критические улучшения: добавить штрафные санкции за просрочку платежей (снизит дебиторку на 34%). 💡 Готовлю шаблон оптимизированного договора поставки.";
+                        
+                    } else if (lowerMessage.includes('автоматизац') || lowerMessage.includes('процесс') || lowerMessage.includes('crm')) {
+                        return "🤖 Анализ процессов: автоматизация сэкономит 67 часов в месяц. 🎯 Приоритеты: 1) CRM-внедрение (ROI 214%), 2) Электронный документооборот (экономия 28К/мес), 3) Автоотчетность (освободит 40 часов). 💰 Общий эффект: +1.2 млн рублей в год.";
+                        
+                    } else {
+                        const responses = [
+                            "🤖 Приветствую! Я ваш ИИ-помощник, подключенный к базе 15,000+ бизнес-кейсов. Только что обновил знания по последним изменениям в законодательстве. Чем могу помочь: налоги, юридические вопросы, найм, автоматизация или что-то другое?",
+                            
+                            "🎯 Бизнес-помощник активирован! За последнюю неделю проанализировал 234 успешных кейса в вашей отрасли. Обнаружены 3 критические точки роста. Хотите получить персонализированные рекомендации или есть срочный вопрос?",
+                            
+                            "✨ Готов к работе! Мои алгоритмы постоянно обучаются на реальных бизнес-данных. Сейчас отслеживаю 27 показателей эффективности. Какой аспект бизнеса хотите улучшить в первую очередь?"
+                        ];
+                        return responses[Math.floor(Math.random() * responses.length)];
+                    }
+                    
+                } else if (chatId === 'accountant') {
+                    if (lowerMessage.includes('отчетност') || lowerMessage.includes('сдать') || lowerMessage.includes('декларация')) {
+                        const responses = [
+                            "📅 Календарь бухгалтера: следующий срок - 25 апреля (аванс по УСН). 📊 Ваша отчетность на 92% готова. 💡 Рекомендация: подать на 3 дня раньше срока - это снизит риски штрафов на 100% и даст время на корректировки.",
+                            
+                            "🧾 Декларация УСН: проверил ваши данные. Все показатели в норме. ⚠️ Внимание: изменился КБК для страховых взносов. 🎯 Автоматически подготовил обновленные платежки - просто подтвердите отправку.",
+                            
+                            "📈 Анализ финансовой отчетности: выросли операционные расходы на 14% при росте выручки на 9%. 💡 Нашел возможность оптимизации: перераспределение затрат между статьями снизит налог на 37,200 рублей."
+                        ];
+                        return responses[Math.floor(Math.random() * responses.length)];
+                        
+                    } else if (lowerMessage.includes('налог') || lowerMessage.includes('упрощенк') || lowerMessage.includes('усн')) {
+                        return "💰 Налоговая оптимизация: анализ показал возможность легального снижения налогов на 18%. 💡 Конкретно: оформление части аренды как складских помещений + правильное распределение представительских расходов. 🎯 Эффект: экономия 156,000 рублей в год.";
+                        
+                    } else if (lowerMessage.includes('зп') || lowerMessage.includes('зарплат') || lowerMessage.includes('сотрудник')) {
+                        return "👥 Расчет зарплаты: проверил ведомость. Все корректно. 💡 Оптимизация: переход на электронные больничные снизит административную нагрузку на 8 часов в месяц. 📊 Готовлю расчет эффективности аутсорсинга расчетов з/п.";
+                        
+                    } else if (lowerMessage.includes('касс') || lowerMessage.includes('онлайн-касс') || lowerMessage.includes('чек')) {
+                        return "🖨️ Кассовая дисциплина: ваши процессы соответствуют требованиям на 94%. ⚠️ Обновление: с 1 июля меняются форматы фискальных данных. 🎯 Уже подготовил план перехода - потребуется 2 часа рабочего времени.";
+                        
+                    } else {
+                        const responses = [
+                            "👋 Бухгалтер на связи! Только что завершил еженедельный аудит ваших финансов. Показатели стабильны, резервы достаточны. 📊 Обнаружил 2 возможности для налоговой оптимизации. Хотите обсудить детали?",
+                            
+                            "📈 Финансовый контроль: все операции за неделю обработаны. 💰 Выручка выросла на 7.3% при сохранении маржи. 💡 Нашел способ ускорить закрытие месяца на 2 дня через автоматизацию проводок. Интересует?",
+                            
+                            "🎯 Ваш финансовый аналитик готов к работе! Проверил все текущие обязательства - рисков нет. 📅 Напоминаю: через 12 дней срок уплаты налогов. 💎 Предлагаю встречу для планирования налоговой стратегии на следующий квартал."
+                        ];
+                        return responses[Math.floor(Math.random() * responses.length)];
+                    }
+                }
+                
+                // Универсальные ответы для неизвестных запросов
+                const universalResponses = [
+                    "🤔 Интересный вопрос! Дайте мне секунду, чтобы проанализировать его в контексте вашего бизнеса...",
+                    "🎯 Понял ваш запрос. Сейчас подключу дополнительные алгоритмы анализа для максимально точного ответа.",
+                    "💡 Зафиксировал вашу потребность. Мой ИИ уже обрабатывает 15+ релевантных данных для персонализированного решения.",
+                    "🚀 Отличный вопрос! Только что обновил базу знаний актуальными данными по вашей тематике.",
+                    "📊 Анализирую... Обнаружил несколько релевантных кейсов в нашей базе. Подготавливаю оптимальное решение."
+                ];
+                
+                return universalResponses[Math.floor(Math.random() * universalResponses.length)];
+            }
+            
+            // Получить текущее время
+            function getCurrentTime() {
+                const now = new Date();
+                return `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+            }
+            
+            // Логика новостей - открытие ссылок
+            document.querySelectorAll('.news-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // Проверяем, не кликнули ли по ссылке
+                    if (e.target.tagName === 'A' || e.target.closest('a')) {
+                        return;
+                    }
+                    
+                    const link = this.getAttribute('data-link');
+                    if (link) {
+                        window.open(link, '_blank');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
